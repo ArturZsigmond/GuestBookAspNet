@@ -1,0 +1,103 @@
+body {
+    background-color: #6A6D6F; /* Refined Nardo Gray */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 1em;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #e74c3c;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+form {
+    background-color: #ffffff;
+    color: #333;
+    padding: 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+input, textarea, button {
+    padding: 0.75em;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+.entry {
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 12px;
+    padding: 1.2em;
+    margin-bottom: 1.5em;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.entry h3 {
+    margin-top: 0;
+    color: #e74c3c;
+}
+
+.entry p {
+    margin: 0.3em 0;
+}
+
+.entry small {
+    color: #888;
+    font-size: 0.85em;
+}
+
+#prev-page, #next-page {
+    margin: 1em 0.5em 0 0;
+    padding: 0.6em 1em;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#prev-page:hover, #next-page:hover {
+    background-color: #ffffff;
+    color: #6A6D6F;
+}

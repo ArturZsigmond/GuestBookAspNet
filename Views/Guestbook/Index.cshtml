@@ -1,0 +1,50 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Guestbook";
+    var isAdmin = Context.Session.GetString("role") == "admin";
+}
+
+<div id="admin-flag" data-is-admin="@(isAdmin.ToString().ToLower())"></div>
+
+<h2>Guestbook</h2>
+
+@if (isAdmin)
+{
+    <div style="margin-bottom: 1em;">
+        <label style="color: white; margin-right: 0.5em;">Group By:</label>
+        <select id="groupBy" style="padding: 0.5em; border-radius: 8px; border: none; background-color: #e74c3c; color: white; margin-right: 1em;">
+            <option value="none">None</option>
+            <option value="author">Author</option>
+            <option value="title">Title</option>
+        </select>
+
+        <label style="color: white; margin-right: 0.5em;">Sort By:</label>
+        <select id="sortBy" style="padding: 0.5em; border-radius: 8px; border: none; background-color: #e74c3c; color: white;">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="rating">Top Rated</option>
+        </select>
+    </div>
+}
+else
+{
+    <form id="guestbook-form" method="post" asp-action="Add">
+        <label>Title</label>
+        <input type="text" name="title" required />
+
+        <label>Comment</label>
+        <textarea name="comment" required></textarea>
+
+        <label>Rating (1–5)</label>
+        <input type="number" name="rating" min="1" max="5" value="3" />
+
+        <button type="submit">Add Entry</button>
+    </form>
+}
+
+<div id="entries-container"></div>
+
+<button id="prev-page">Previous</button>
+<button id="next-page">Next</button>
+
+<script src="~/main.js"></script>

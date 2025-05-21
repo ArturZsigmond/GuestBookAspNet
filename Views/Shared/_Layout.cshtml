@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Guestbook</title>
+    <link rel="stylesheet" href="~/style.css" />
+</head>
+<body>
+    <nav>
+        @if (Context.Session.GetString("email") != null)
+        {
+            <span>Logged in as: @Context.Session.GetString("email")</span>
+            <a href="/Auth/Logout">Logout</a>
+        }
+        else
+        {
+        <a href="/Auth/Login">Login</a> 
+        <a href="/Auth/Register">Register</a>
+        }
+    </nav>
+
+    <main>
+        @RenderBody()
+    </main>
+</body>
+</html>
