@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GuestBookAspNet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+899179298ff36b2c62226fc0b67a6da8e4ca40d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("GuestBookAspNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GuestBookAspNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
